@@ -1,0 +1,47 @@
+﻿@model EmpManagement.Models.Employee
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Create", "Employee", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.name)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.name)
+                @Html.ValidationMessageFor(m => m.name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.email)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.email)
+                @Html.ValidationMessageFor(m => m.email)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.phone)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.phone)
+                @Html.ValidationMessageFor(m => m.phone)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="submit" title="submit" />
+            </td>
+        </tr>
+
+    </table>
+}
+
